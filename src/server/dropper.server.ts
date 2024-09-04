@@ -1,4 +1,4 @@
-import { CollectionService, Workspace } from "@rbxts/services";
+import { CollectionService, Debris, Workspace } from "@rbxts/services";
 import { FindFirstChildWithTag } from "server/util/findFirstChildWithTag";
 
 while (true) {
@@ -15,6 +15,7 @@ while (true) {
 				newPart.Parent = Workspace;
 				newPart.Position = part.Position.add(new Vector3(0, -1, 0));
 				print("Spawned");
+				Debris.AddItem(newPart, 10);
 			}
 		}
 	}
