@@ -47,6 +47,8 @@ for (const button of CollectionService.GetTagged("button")) {
 				}
 
 				for (const upgradeModel of CollectionService.GetTagged(upgradeID as string)) {
+					if (upgradeModel.Parent !== button.Parent) continue;
+
 					print("upgrade");
 					for (const upgradePart of upgradeModel.GetChildren()) {
 						if (upgradePart.IsA("Part")) {
