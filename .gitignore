@@ -6,3 +6,5 @@
 *.rbxl.lock
 
 package-lock.json
+
+*.drawio.bkp
